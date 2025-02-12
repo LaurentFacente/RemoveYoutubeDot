@@ -1,0 +1,15 @@
+{
+	"manifest_version": 3,
+	"name": "Remove YouTube newness-dot",
+	"version": "1.0",
+	"description": "Supprime l'élément 'newness-dot' sur YouTube",
+	"permissions": ["scripting"],
+	"host_permissions": ["https://www.youtube.com/*"],
+	"content_scripts": [
+		{
+			"matches": ["*://www.youtube.com/*"],
+			"js": ["content.js"],
+			"run_at": "document_end"
+		}
+	]
+}
